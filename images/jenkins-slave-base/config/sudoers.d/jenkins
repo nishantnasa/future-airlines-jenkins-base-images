@@ -1,0 +1,6 @@
+# Cmnd alias specification
+Cmnd_Alias APT_CMD = /usr/bin/apt-get, /usr/bin/apt
+Cmnd_Alias PKG_MGR_CMD = /usr/local/bin/pip, /usr/local/bin/pip3, /opt/node*/bin/npm
+
+# Allow jenkins user to execute only specific commands as root
+jenkins ALL=(root) NOPASSWD:PKG_MGR_CMD
