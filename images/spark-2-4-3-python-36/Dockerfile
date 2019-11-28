@@ -1,4 +1,4 @@
-FROM 762508870528.dkr.ecr.ap-southeast-2.amazonaws.com/future-airlines-jenkins-base-images/python-36
+FROM 762508870528.dkr.ecr.ap-southeast-2.amazonaws.com/future-airlines-jenkins-base-images:python-36
 
 ENV PYTHON_VERSION 3.6.5
 ENV SPARK_VERSION 2.4.3

@@ -1,4 +1,4 @@
-FROM 762508870528.dkr.ecr.ap-southeast-2.amazonaws.com/future-airlines-jenkins-base-images/jenkins-slave-base
+FROM 762508870528.dkr.ecr.ap-southeast-2.amazonaws.com/future-airlines-jenkins-base-images:jenkins-slave-base
 
 USER root
 WORKDIR /opt
