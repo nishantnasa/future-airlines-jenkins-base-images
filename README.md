@@ -67,7 +67,7 @@ node keyword.
 
 ```
 # Jenkinsfile
-node("node-10") { // node-10 docker tag
+node("openjdk-8") { // node-10 docker tag
     withMaven(mavenSettingsConfig:'my-maven-settings') {
        sh "mvn clean deploy"
     }
