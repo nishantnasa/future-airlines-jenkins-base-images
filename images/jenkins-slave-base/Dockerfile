@@ -4,7 +4,6 @@ USER root
 
 ARG credstash_go_version=0.3.5
 ARG maven_version=3.3.9
-ARG sonar_scanner_version=3.3.0.1492
 
 WORKDIR /opt
 
@@ -32,7 +31,6 @@ RUN tar -zxf apache-maven-${maven_version}-bin.tar.gz \
       && gunzip -c gcredstash-v${credstash_go_version}-linux-amd64.gz > /usr/bin/gcredstash \
       && rm -f gcredstash-v${credstash_go_version}-linux-amd64.gz \
       && chmod 755 /usr/bin/gcredstash \
-      && unzip sonar-scanner-cli-${sonar_scanner_version}.zip -d /opt/ \
        && apt-get update \
       && apt-get install -y jq docker \
       && mkdir /opt/build
