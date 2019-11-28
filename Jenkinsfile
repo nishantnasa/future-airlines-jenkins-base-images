@@ -66,6 +66,7 @@ node {
         def BUILD_IMAGE = readFile('var_user_input_build_image').trim()
 
         dir("images/${BUILD_IMAGE}") {
+            sh "aws ecr get-login --no-include-email --region ap-southeast-2"
             sh "docker push ${ECR_URI}/${ECR_REPO_NAME}:${BUILD_IMAGE}"
         }
     }
